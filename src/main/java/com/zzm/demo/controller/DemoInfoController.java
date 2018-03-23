@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * Created by ${sq} on 2017/9/25.
@@ -52,10 +53,10 @@ public class DemoInfoController {
         User user = new User();
         user.setAge(33);
         user.setDate(new Date());
-        user.setUid("2");
+        user.setUuid(UUID.randomUUID().toString().replaceAll("-", "").toLowerCase());
         user.setName("王五");
         user.setAddress("23");
-        mongoTemplate.insert(user, "demoInfo");
+        mongoTemplate.insert(user, "demoInfo2");
         return "OK";
     }
     //批量使用mongdb进行插入

@@ -36,7 +36,7 @@ public class UserController {
         user.setAge(1);
         user.setId(id);
         user.setAddress("lalala");
-        user.setUid("1");
+        user.setUuid("1");
         user.setDate(new Date());
         user.setName("zzm");
         iUserService.saveUser(user);

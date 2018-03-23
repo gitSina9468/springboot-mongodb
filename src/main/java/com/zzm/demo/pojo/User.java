@@ -14,8 +14,8 @@ import java.util.Date;
 public class User implements Serializable{
     @Id
     private String id;  //自定义id
-    @Indexed
-    private String uid; //使用索引
+//    @Indexed
+    private String uuid; //使用索引
     private String name;
     private int age;
     @JSONField(format = "yyyy-MM-dd HH:mm:ss")
@@ -31,12 +31,12 @@ public class User implements Serializable{
         this.id = id;
     }
 
-    public String getUid() {
-        return uid;
+    public String getUuid() {
+        return uuid;
     }
 
-    public void setUid(String uid) {
-        this.uid = uid;
+    public void setUuid(String uuid) {
+        this.uuid = uuid;
     }
 
     public String getName() {
@@ -70,9 +70,11 @@ public class User implements Serializable{
     @Override
     public String toString() {
         return "User{" +
-                "uid='" + uid + '\'' +
+                "id='" + id + '\'' +
+                ", uuid='" + uuid + '\'' +
                 ", name='" + name + '\'' +
                 ", age=" + age +
+                ", date=" + date +
                 ", address='" + address + '\'' +
                 '}';
     }

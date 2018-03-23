@@ -11,7 +11,7 @@ import java.util.List;
  * @version V1.0
  */
 public interface IUserDao extends MongoRepository<User, Integer> {
-    User findByUidAndNameOrAge(String uid,String name,int age);
+    User findByUuidAndNameOrAge(String uid,String name,int age);
 
     List<User> findByName(String name);
 

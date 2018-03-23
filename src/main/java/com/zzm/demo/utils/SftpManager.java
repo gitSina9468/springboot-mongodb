@@ -376,7 +376,8 @@ public class SftpManager {
         /** 远程连接*/
         ChannelSftp sftp = connect("106.14.133.57","root","TYadmin123",22);
         /** 操作文件*/
-        upload(sftp,"C:\\JavaDevelopment\\IDEA\\genyong.jpg","/usr/local/myImage/image/genyong.jpg");
+//        upload(sftp,"C:\\JavaDevelopment\\ElementUI\\bootdo-master\\bootdo\\target\\bootdo-1.5.0.jar","/usr/springboot/bootdo-1.5.0.jar");
+        upload(sftp,"C:\\mejust\\test\\fastdfs-nginx-module-master.zip","/usr/java/nginx/fastdfs-nginx-module-master.zip");
 //        download(sftp, "/home/www/images", "C:\\JavaDevelopment\\IDEA\\demo2.png", "my.png");
 //        delete("/home/www/images","my.png",sftp);
         /** 断开连接*/
