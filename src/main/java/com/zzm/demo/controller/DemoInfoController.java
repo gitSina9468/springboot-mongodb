@@ -47,6 +47,13 @@ public class DemoInfoController {
         mongoTemplate.insert(demoInfo, "demoInfo");
         return "OK";
     }
+    //单个指定库删除mongodb
+    @RequestMapping("delete")
+    public String delete(){
+        Query query =Query.query(Criteria.where("name").is("机械纪元"));
+        mongoTemplate.remove(query, "demoInfo");
+        return "OK";
+    }
     //单个指定库插入mongodb
     @RequestMapping("insert2")
     public String insert2(){

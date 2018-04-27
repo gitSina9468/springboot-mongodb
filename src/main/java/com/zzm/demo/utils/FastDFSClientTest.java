@@ -29,15 +29,18 @@ public class FastDFSClientTest {
      */
     @Test
     public void testUpload() {
-        File file = new File("C:\\Users\\admin\\Desktop\\测试图片\\礼包banner.jpg");
+        File file = new File("C:\\Users\\admin\\Desktop\\测试图片\\QQ图片20180202002208.jpg");
         Map<String, String> metaList = new HashMap<String, String>();
         metaList.put("width", "750");
         metaList.put("height", "220");
-        metaList.put("author", "杨信");
-        metaList.put("date", "20180319");
+        metaList.put("author", "呵呵");
+        metaList.put("date", "20991231");
 
-        String fid = FastDFSClient.uploadFile(file, file.getName(), metaList);
-        System.out.println("upload local file " + file.getPath() + " ok, fileid=" + fid);
+        for (int i = 0; i < 10000; i++) {
+
+            String fid = FastDFSClient.uploadFile(file, file.getName(), metaList);
+            System.out.println("num = "+ i + ",upload local file " + file.getPath() + " ok, fileid=" + fid);
+        }
         //上传成功返回的文件ID： group1/M00/00/00/wKgAyVgFk9aAB8hwAA-8Q6_7tHw351.jpg
     }
 
