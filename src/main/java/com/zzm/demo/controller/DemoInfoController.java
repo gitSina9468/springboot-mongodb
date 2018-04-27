@@ -103,7 +103,6 @@ public class DemoInfoController {
     }
 
 
-
     //更新条件不变，更新字段改成了一个我们集合中不存在的，用set方法如果更新的key不存在则创建一个新的key
     @RequestMapping("updateMulti")
     public WriteResult  updateMulti(){
